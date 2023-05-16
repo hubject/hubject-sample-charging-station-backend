@@ -26,16 +26,6 @@ Install the dependencies:
 npm install
 ```
 
-# Configuration
-
-Open the ```config.js``` file.
-
-Update the configuration options as needed:
-
-```
-Set the port number (port) to the desired value (default is 3000).
-```
-
 # Running the API
 
 Start the API server:
@@ -45,6 +35,8 @@ npm start
 ```
 
 The API server will start running on the configured port (default is 3000).
+
+Open http://localhost:3000/api/charging-stations to test that the server has started
 
 ## API Endpoints
 
