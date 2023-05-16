@@ -17,7 +17,7 @@ git clone https://github.com/hubject/hubject-sample-charging-station-backend
 Navigate to the project directory:
 
 ```
-cd electric-car-charging-api
+cd hubject-sample-charging-station-backend
 ```
 
 Install the dependencies:

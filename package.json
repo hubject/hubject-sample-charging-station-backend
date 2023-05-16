@@ -1,0 +1,16 @@
+{
+  "name": "Hubject sample charging station backend",
+  "version": "1.0.0",
+  "description": "EV finder test api",
+  "main": "ev-api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ev-api.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  }
+}
