@@ -32,6 +32,20 @@ app.get('/api/charging-stations/:id', (req, res) => {
   }
 });
 
+// Search charging stations
+app.post('/api/charging-stations/search', (req, res) => {
+  const { location, criteria } = req.body;
+  // Perform search logic based on location and criteria
+  const results = chargingStations.filter((station) => {
+    return (
+      station.address.toLowerCase().includes(location.toLowerCase()) &&
+      station.connectors.includes(criteria)
+    );
+  });
+  res.json(results);
+});
+
+
 // Endpoint to retrieve reviews for a specific charging station
 app.get('/api/charging-stations/:id/reviews', (req, res) => {
   const stationId = parseInt(req.params.id);
