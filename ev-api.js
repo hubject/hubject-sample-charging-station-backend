@@ -35,6 +35,11 @@ app.get('/api/charging-stations/:id', (req, res) => {
 // Search charging stations
 app.post('/api/charging-stations/search', (req, res) => {
   const { location, criteria } = req.body;
+
+  if (!location) {
+    return res.status(400).json({ error: 'Location is required' });
+  }
+  
   // Perform search logic based on location and criteria
   const results = chargingStations.filter((station) => {
     return (
@@ -51,7 +56,11 @@ app.get('/api/charging-stations/:id/reviews', (req, res) => {
   const stationId = parseInt(req.params.id);
   const stationReviews = reviews.filter(review => review.chargingStationId === stationId);
 
-  res.json(stationReviews);
+  if (stationReviews.length > 0) {
+    res.json(stationReviews);
+  } else {
+    res.status(404).json({ error: 'No reviews found for the charging station' });
+  }
 });
 
 // Endpoint to add a new review for a charging station
