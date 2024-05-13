@@ -1,4 +1,4 @@
-# Hubject sample charging station backend
+# Hubject sample charging station backend for hubject internal usage. 
 
 The Sample Electric Car Charging Station backend API provides endpoints to retrieve charging station data and manage review.
 
